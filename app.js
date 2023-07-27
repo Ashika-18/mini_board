@@ -10,7 +10,7 @@ const login_page = fs.readFileSync('./login.ejs', 'utf-8');
 const max_num = 10; //最大保管数
 const filename = 'mydata.txt'; //データファイル名
 var message_data; //データ
-readFromFile(filename);
+// readFromFile(filename);
 
 //createServerの処理
 const getFromClient = (request, response) => {
@@ -81,6 +81,7 @@ const readFromFile = (fname) => {
         message_data = data.split('/');
     });
 }
+readFromFile(filename);
 
 //データを更新
 const addToData = (id, msg, fname, request) => {
